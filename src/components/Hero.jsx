@@ -5,8 +5,8 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 export default function Hero() {
   return (
     <div className="w-full  md:w-[80%] md:px-12  my-8 text-center ">
-      <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-8">
-        Hi👋, I'm <span className="text-[#F46C38]">Abhishek Shrivastav.</span>
+      <h1 className="text-2xl md:text-3xl font-bold mb-3 md:mb-8">
+        Hi👋, <br />I'm <span className="text-[#F46C38]">Abhishek Shrivastav.</span>
       </h1>
       <h1 className="md:text-[10vw] text-5xl font-black leading-10">
         FULL-STACK
