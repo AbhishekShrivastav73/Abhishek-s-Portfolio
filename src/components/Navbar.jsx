@@ -8,8 +8,8 @@ import { LuContact2 } from "react-icons/lu";
 export default function Navbar() {
   return (
     <header className="p-4 ">
-      <nav className="w-fit py-4 mt-2 px-6 md:w-fit text-xl md:gap-10 mx-auto flex items-center justify-center md:justify-evenly gap-10  rounded-full bg-zinc-900">
-        <Link to="/">
+      <nav className="w-fit  py-4 mt-2 px-6 md:w-fit text-xl md:gap-10 mx-auto flex items-center justify-center md:justify-evenly gap-10  rounded-full bg-zinc-900">
+        <Link to="/" className="text-[#F46C38]">
           <LuHome />
         </Link>
         <Link to="/">
