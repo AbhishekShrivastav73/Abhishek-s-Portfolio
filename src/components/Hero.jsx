@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { Link, Links } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -20,12 +21,12 @@ export default function Hero() {
         Specialize in transforming ideas into beautifully crafted products.
       </p>
       <div className="flex flex-col items-center gap-4 md:flex-row justify-center my-6">
-        <button className="bg-[#F46C38] px-6 py-3 text-center rounded-full font-semibold ">
+        <Link to='/projects' className="bg-[#F46C38] px-6 py-3 text-center rounded-full font-semibold ">
           Explore Projects <FaArrowUpRightFromSquare className="inline" />
-        </button>
-        <button className="bg-[#58C2F9]  px-6 py-3 text-center rounded-full font-semibold ">
+        </Link>
+        <Link className="bg-[#58C2F9]  px-6 py-3 text-center rounded-full font-semibold ">
           Let's Connect <FaArrowUpRightFromSquare className="inline" />
-        </button>
+        </Link>
       </div>
     </div>
   );

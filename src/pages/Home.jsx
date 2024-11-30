@@ -80,7 +80,7 @@ export default function Home() {
           </h3>
         </div>
         <div className="flex md:flex-row justify-center flex-wrap flex-col  w-full gap-5 py-8">
-          {projects.map((elem, idx) => {
+          {projects.map((elem, idx)=> {
             return <ProjectCard data={elem} key={idx} />;
           })}
         </div>
