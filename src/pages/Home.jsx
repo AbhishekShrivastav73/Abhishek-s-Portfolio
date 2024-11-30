@@ -86,9 +86,22 @@ export default function Home() {
             return <ProjectCard data={elem} key={idx} />;
           })}
         </div>
-        <Link to='/projects' className="border hover:bg-zinc-200 hover:text-zinc-950 duration-300 ease-in-out px-6 text-center py-2 rounded-full text-sm tracking-tight flex items-center gap-3">
+        <Link
+          to="/projects"
+          className="border hover:bg-zinc-200 hover:text-zinc-950 duration-300 ease-in-out px-6 text-center py-2 rounded-full text-sm tracking-tight flex items-center gap-3"
+        >
           Explore All Projects <FaArrowUpRightFromSquare />
         </Link>
+        <div className="w-full my-8">
+          <h3 className="text-2xl md:text-5xl text-zinc-600 font-black leading-[1]">
+            WHAT I AM GOOD AT
+          </h3>
+          <h3 className="text-5xl md:text-7xl font-black flex  items-center gap-2 flex-wrap  leading-[1]">
+            <span className="text-[#F46C38]">SKILLS</span>
+            <span className="text-5xl md:text-8xl">&</span>
+            <span className="text-[#58C2F9]">INTEREST.</span>
+          </h3>
+        </div>
       </main>
     </div>
   );
