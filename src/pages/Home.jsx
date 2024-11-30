@@ -42,16 +42,18 @@ export default function Home() {
       img: "https://imgs.search.brave.com/mzQZcAsKY1o5t_Lsyq27soBAUBntlMjTV50IGf1qthE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzE2LzU1LzAz/LzM2MF9GXzMxNjU1/MDM2Nl82SUV1ZWRB/SnFaOUpZSXFuUXFt/cmFvTFBwZjZxZlBD/Yi5qcGc",
       flexDirection: "flex-row",
       liveLink : '',
-      bgColor : '[#F46C38]'
+      bgColor : '[#F46C38]',
+      techStack : ['ReactJS',"Redux","MongoDB", 'Tailwind CSS']
     },
     {
       title: "Spotify Clone",
       description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
           delectus ratione itaque accusamus ex doloribus iure id ducimus.
           Quaerat odit a fugiat odio quam!`,
-      img: "https://imgs.search.brave.com/RXFCsjTiCQVEXgsr96ffWA2DzSqSlDVn8jaegDfvkZQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3Byb2R1/Y3Rpb24tZW5nLzEv/MjAxOC8xMi9zcG90/aWZ5LXdlYi1wbGF5/ZXIuanBnP3c9NzMw",
+      img: "https://imgs.search.brave.com/a-ZDrNBbQNMIpmkyncHEZ1YCcyP37ViizecuD-PzLNQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/ZS5tYWdlbmVzdC5j/b20vd3Avd3AtY29u/dGVudC91cGxvYWRz/LzIwMjAvMDkvYmVz/dC0xMDI0eDU3Ny5q/cGc",
       flexDirection: "flex-row-reverse",
-      bgColor : '[#58C2F9]'
+      bgColor : '[#58C2F9]',
+      techStack : ['ReactJS',"Redux","MongoDB", 'Tailwind CSS'] 
     },
   ]);
 
@@ -73,7 +75,7 @@ export default function Home() {
             PROJECTS.
           </h3>
         </div>
-        <div className="flex justify-center py-5 w-full gap-6 my-8 flex-wrap">
+        <div className="flex flex-col  w-full gap-5 py-8">
           {projects.map((elem, idx) => {
             return <ProjectCard data={elem} key={idx} />;
           })}
