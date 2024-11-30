@@ -21,7 +21,7 @@ export default function Home() {
       bgcolor:
         "https://media.istockphoto.com/id/1388817756/vector/art-background-of-blue-and-green-squares-connected-diagonally-geometric-texture-abstract-art.jpg?s=612x612&w=0&k=20&c=oswEX3lg3C1JzfmLav9c7JqVo5G_ZVB26PjuD1Ze3e8=",
       color: "text-black",
-      to: "/my-projects",
+      to: "/projects",
     },
     {
       title: "Tech Stack",
@@ -55,6 +55,10 @@ export default function Home() {
       bgColor : '[#58C2F9]',
       techStack : ['ReactJS',"Redux","MongoDB", 'Tailwind CSS'] 
     },
+    {
+      title : 'Music Player',
+      img : 'https://imgs.search.brave.com/LJwjEDunvXKIwVPWRgzIut45iDEuFKY8Q-y8tSe2G3c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kdWV0/LWNkbi52b3gtY2Ru/LmNvbS90aHVtYm9y/LzB4MDoyMDAweDEx/MjUvMjQwMHgxNjAw/L2ZpbHRlcnM6Zm9j/YWwoMTAwMHg1NjM6/MTAwMXg1NjQpOmZv/cm1hdCh3ZWJwKS9j/ZG4udm94LWNkbi5j/b20vdXBsb2Fkcy9j/aG9ydXNfYXNzZXQv/ZmlsZS8yNTY5Mjk4/OS9FMkVfU2NyZWVu/cy5qcGc'
+    }
   ]);
 
   return (
@@ -70,12 +74,12 @@ export default function Home() {
         </div>
         <hr className=" w-1/3 my-8" />
         <div className="w-full ">
-          <h3 className="text-6xl md:text-7xl font-black">RECENT</h3>
-          <h3 className="text-6xl md:text-7xl font-black text-zinc-600">
+          <h3 className="text-6xl md:text-8xl font-black">RECENT</h3>
+          <h3 className="text-6xl md:text-8xl font-black text-zinc-600">
             PROJECTS.
           </h3>
         </div>
-        <div className="flex flex-col  w-full gap-5 py-8">
+        <div className="flex md:flex-row justify-center flex-wrap flex-col  w-full gap-5 py-8">
           {projects.map((elem, idx) => {
             return <ProjectCard data={elem} key={idx} />;
           })}
