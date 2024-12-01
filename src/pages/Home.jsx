@@ -43,7 +43,7 @@ export default function Home() {
       <Navbar />
       <main className="flex md:items-center  p-8  flex-col  ">
         <Hero />
-        {/* <IdCard/> */}
+        {/* Acheivement Boxs  */}
         <div className="flex flex-col md:flex-row items-center gap-3">
           {box.map((items, idx) => {
             return <Box data={items} key={idx} />;
@@ -77,6 +77,7 @@ export default function Home() {
             <span className="text-[#58C2F9]">INTEREST.</span>
           </h3>
         </div>
+        
       </main>
     </div>
   );

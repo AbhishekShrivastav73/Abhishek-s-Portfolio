@@ -6,7 +6,7 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 export default function ProjectDets({ data, direction }) {
   return (
     <div
-      className={`w-full flex flex-col ${direction} items-center gap-3 md:gap-8`}
+      className={`w-full flex flex-col bg-zinc-950 md:bg-zinc-950 hover:bg-[#58C2F9] hover:p-8 ease-in-out duration-300 py-4 md:px-4 rounded-2xl ${direction} items-center gap-3 md:gap-8`}
     >
       <div className="w-full">
         <img className="w-full rounded-lg" src={data.img} alt="" />
@@ -14,10 +14,10 @@ export default function ProjectDets({ data, direction }) {
       <div className="w-full flex flex-col">
         <div className="flex flex-col gap-2">
           <div>
-            <h1 className="text-2xl tracking-wider md:text-4xl font-semibold">
+            <h1 className="text-2xl tracking-wider md:text-4xl font-bold">
               {data.title}
             </h1>
-            <p className="tracking-tighter text-zinc-500">{data.development}</p>
+            <p className="tracking-tighter text-sm text-zinc-500">{data.development}</p>
           </div>
           <p className="text-xs md:w-[70%] font-thin">{data.description}</p>
           <div className="flex items-center gap-4 flex-wrap">
@@ -38,7 +38,7 @@ export default function ProjectDets({ data, direction }) {
             {" "}
             <FaGithub className="text-2xl" /> GitHub Repository
           </Link>
-          <Link className="flex text-sm text-[#F46C38] font-semibold items-center gap-2">
+          <Link className="flex text-sm text-[#F46C38]  font-bold items-center gap-2">
             Live Preview <FaArrowUpRightFromSquare />{" "}
           </Link>
         </div>
