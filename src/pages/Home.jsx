@@ -6,8 +6,11 @@ import Box from "../components/Box";
 import ProjectCard from "../components/ProjectCard";
 import { Link } from "react-router-dom";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { useSelector } from "react-redux";
 
 export default function Home() {
+  const projects = useSelector((state) => state.projects);
+
   const [box, setBox] = useState([
     {
       title: "My Achievements",
@@ -32,34 +35,6 @@ export default function Home() {
         "https://imgs.search.brave.com/Cny1K13rgTH__xZ9EzHCVrdLLiLihtK4wxQLO3w6C08/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzgyL2Ux/LzEwLzgyZTExMGFk/ZDlmYjExYzgwZDhl/MjBiODRmZDVjNjAw/LmpwZw",
       color: "text-white",
       to: "/tech-stack",
-    },
-  ]);
-
-  const [projects, setProjects] = useState([
-    {
-      title: "E-COMMERCE",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-          delectus ratione itaque accusamus ex doloribus iure id ducimus.
-          Quaerat odit a fugiat odio quam!`,
-      img: "https://imgs.search.brave.com/mzQZcAsKY1o5t_Lsyq27soBAUBntlMjTV50IGf1qthE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzE2LzU1LzAz/LzM2MF9GXzMxNjU1/MDM2Nl82SUV1ZWRB/SnFaOUpZSXFuUXFt/cmFvTFBwZjZxZlBD/Yi5qcGc",
-      flexDirection: "flex-row",
-      liveLink: "",
-      bgColor: "[#F46C38]",
-      techStack: ["ReactJS", "Redux", "MongoDB", "Tailwind CSS"],
-    },
-    {
-      title: "Spotify Clone",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-          delectus ratione itaque accusamus ex doloribus iure id ducimus.
-          Quaerat odit a fugiat odio quam!`,
-      img: "https://imgs.search.brave.com/a-ZDrNBbQNMIpmkyncHEZ1YCcyP37ViizecuD-PzLNQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/ZS5tYWdlbmVzdC5j/b20vd3Avd3AtY29u/dGVudC91cGxvYWRz/LzIwMjAvMDkvYmVz/dC0xMDI0eDU3Ny5q/cGc",
-      flexDirection: "flex-row-reverse",
-      bgColor: "[#58C2F9]",
-      techStack: ["ReactJS", "Redux", "MongoDB", "Tailwind CSS"],
-    },
-    {
-      title: "Music Player",
-      img: "https://imgs.search.brave.com/LJwjEDunvXKIwVPWRgzIut45iDEuFKY8Q-y8tSe2G3c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kdWV0/LWNkbi52b3gtY2Ru/LmNvbS90aHVtYm9y/LzB4MDoyMDAweDEx/MjUvMjQwMHgxNjAw/L2ZpbHRlcnM6Zm9j/YWwoMTAwMHg1NjM6/MTAwMXg1NjQpOmZv/cm1hdCh3ZWJwKS9j/ZG4udm94LWNkbi5j/b20vdXBsb2Fkcy9j/aG9ydXNfYXNzZXQv/ZmlsZS8yNTY5Mjk4/OS9FMkVfU2NyZWVu/cy5qcGc",
     },
   ]);
 
@@ -88,7 +63,7 @@ export default function Home() {
         </div>
         <Link
           to="/projects"
-          className="border hover:bg-zinc-200 hover:text-zinc-950 duration-300 ease-in-out px-6 text-center py-2 rounded-full text-sm tracking-tight flex items-center gap-3"
+          className="border hover:bg-zinc-200  hover:text-zinc-950 duration-300 ease-in-out px-6 text-center py-2 rounded-full text-sm tracking-tight flex items-center justify-center gap-3"
         >
           Explore All Projects <FaArrowUpRightFromSquare />
         </Link>
@@ -96,7 +71,7 @@ export default function Home() {
           <h3 className="text-2xl md:text-5xl text-zinc-600 font-black leading-[1]">
             WHAT I AM GOOD AT
           </h3>
-          <h3 className="text-5xl md:text-7xl font-black flex  items-center gap-2 flex-wrap  leading-[1]">
+          <h3 className="text-6xl md:text-7xl font-black flex  items-center gap-2 flex-wrap  leading-[1]">
             <span className="text-[#F46C38]">SKILLS</span>
             <span className="text-5xl md:text-8xl">&</span>
             <span className="text-[#58C2F9]">INTEREST.</span>

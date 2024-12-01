@@ -1,7 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import { useSelector } from "react-redux";
+import ProjectCard from "../components/ProjectCard";
+import ProjectDets from "../components/ProjectDets";
 
 export default function Projects() {
+  const projects = useSelector((state) => state.projects);
+
   return (
     <div className="w-full min-h-screen">
       <Navbar />
@@ -15,8 +20,18 @@ export default function Projects() {
             <span className="text-zinc-600">PROJECTS.</span>
           </h1>
         </div>
-        <div>
-          
+        <div className="flex flex-col  gap-5 my-8">
+          {projects?.map((items, idx) => {
+            return idx % 2 !== 0 ? (
+              <ProjectDets
+                key={idx}
+                data={items}
+                direction="md:flex-row-reverse"
+              />
+            ) : (
+              <ProjectDets key={idx} data={items} direction="md:flex-row" />
+            );
+          })}
         </div>
       </main>
     </div>
