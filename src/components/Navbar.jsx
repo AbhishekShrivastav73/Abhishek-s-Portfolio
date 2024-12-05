@@ -12,7 +12,7 @@ export default function Navbar() {
         <Link to="/" className="text-[#F46C38]">
           <LuHome />
         </Link>
-        <Link to="/">
+        <Link to="/projects">
           <LuCode2 />
         </Link>
         <Link to="/">

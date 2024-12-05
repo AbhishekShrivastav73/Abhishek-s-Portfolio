@@ -14,7 +14,7 @@ export default function ProjectDets({ data, direction }) {
       <div className="w-full flex flex-col">
         <div className="flex flex-col gap-2">
           <div>
-            <h1 className="text-2xl tracking-wider md:text-4xl font-bold">
+            <h1 className="text-2xl tracking-normal md:text-4xl font-bold">
               {data.title}
             </h1>
             <p className="tracking-tighter text-sm text-zinc-500">{data.development}</p>
