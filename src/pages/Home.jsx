@@ -7,6 +7,9 @@ import ProjectCard from "../components/ProjectCard";
 import { Link } from "react-router-dom";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { useSelector } from "react-redux";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const projects = useSelector((state) => state.projects);
@@ -38,17 +41,31 @@ export default function Home() {
     },
   ]);
 
+  // Framer Motion animation for scroll
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    setScrollPosition(window.pageYOffset);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="w-full min-h-screen">
       <Navbar />
       <main className="flex md:items-center  p-8  flex-col  ">
         <Hero />
         {/* Acheivement Boxs  */}
+
         <div className="flex flex-col md:flex-row items-center gap-3">
           {box.map((items, idx) => {
             return <Box data={items} key={idx} />;
           })}
         </div>
+
         <hr className=" w-1/3 my-8" />
         <div className="w-full">
           <h3 className="text-6xl md:text-8xl font-black">RECENT</h3>
@@ -56,11 +73,20 @@ export default function Home() {
             PROJECTS.
           </h3>
         </div>
-        <div className="flex md:flex-row justify-center flex-wrap flex-col  w-full gap-5 py-8">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
+          }}
+          transition={{ duration: 1 }}
+          className="flex md:flex-row justify-center flex-wrap flex-col  w-full gap-5 py-8"
+        >
           {projects.map((elem, idx) => {
             return <ProjectCard data={elem} key={idx} />;
           })}
-        </div>
+        </motion.div>
         <Link
           to="/projects"
           className="border hover:bg-zinc-200  hover:text-zinc-950 duration-300 ease-in-out px-6 text-center py-2 rounded-full text-sm tracking-tight flex items-center justify-center gap-3"
@@ -77,7 +103,6 @@ export default function Home() {
             <span className="text-[#58C2F9]">INTEREST.</span>
           </h3>
         </div>
-        
       </main>
     </div>
   );
