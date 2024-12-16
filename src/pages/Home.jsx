@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import IdCard from "../components/IdCard";
 import Hero from "../components/Hero";
@@ -10,6 +10,8 @@ import { useSelector } from "react-redux";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
   const projects = useSelector((state) => state.projects);
@@ -41,17 +43,21 @@ export default function Home() {
     },
   ]);
 
-  // Framer Motion animation for scroll
-  const [scrollPosition, setScrollPosition] = useState(0);
+  useEffect(() => {
+      AOS.init({
+        duration: 600, // Animation duration
+        easing: 'ease-in-out', // Animation easing
+        once: false, // Animation should happen only once
+      });
+  
+      // Optional: Clean up on component unmount
+      return () => {
+        AOS.refreshHard(); // Ensures smooth re-initialization
+      };
+    }, []);
 
-  const handleScroll = () => {
-    setScrollPosition(window.pageYOffset);
-  };
-
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  
+  
 
   return (
     <div className="w-full min-h-screen">
@@ -68,36 +74,31 @@ export default function Home() {
 
         <hr className=" w-1/3 my-8" />
         <div className="w-full">
-          <h3 className="text-6xl md:text-8xl font-black">RECENT</h3>
-          <h3 className="text-6xl md:text-8xl font-black  text-zinc-600">
+          <h3 data-aos="fade-right" className="text-6xl md:text-8xl font-black">RECENT</h3>
+          <h3 data-aos="fade-right" className="text-6xl md:text-8xl font-black  text-zinc-600">
             PROJECTS.
           </h3>
         </div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1 },
-          }}
-          transition={{ duration: 1 }}
+        <div
+          
           className="flex md:flex-row justify-center flex-wrap flex-col  w-full gap-5 py-8"
         >
           {projects.map((elem, idx) => {
-            return <ProjectCard data={elem} key={idx} />;
+            return <ProjectCard  data={elem} key={idx} />;
           })}
-        </motion.div>
-        <Link
+        </div>
+        <Link  data-aos="fade-up"
+
           to="/projects"
           className="border hover:bg-zinc-200  hover:text-zinc-950 duration-300 ease-in-out px-6 text-center py-2 rounded-full text-sm tracking-tight flex items-center justify-center gap-3"
         >
           Explore All Projects <FaArrowUpRightFromSquare />
         </Link>
         <div className="w-full my-8">
-          <h3 className="text-2xl md:text-5xl text-zinc-600 font-black leading-[1]">
+          <h3 data-aos="fade-right"  className="text-2xl md:text-5xl text-zinc-600 font-black leading-[1]">
             WHAT I AM GOOD AT
           </h3>
-          <h3 className="text-6xl md:text-7xl font-black flex  items-center gap-2 flex-wrap  leading-[1]">
+          <h3 data-aos="fade-right"  className="text-6xl md:text-7xl font-black flex  items-center gap-2 flex-wrap  leading-[1]">
             <span className="text-[#F46C38]">SKILLS</span>
             <span className="text-5xl md:text-8xl">&</span>
             <span className="text-[#58C2F9]">INTEREST.</span>
