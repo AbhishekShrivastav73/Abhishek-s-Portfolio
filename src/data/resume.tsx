@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Abhishek Shrivastav",
   initials: "AS",
-  url: "https://dillion.io",
+  url: "https://github.com/AbhishekShrivastav73",
   location: "San Francisco, CA",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
@@ -34,7 +34,7 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/AbhishekShrivastav73",
         icon: Icons.github,
 
         navbar: true,
