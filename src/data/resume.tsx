@@ -73,8 +73,8 @@ export const DATA = {
     {
       company: "Infoseek",
       href: "https://atomic.finance",
-      badges: ['Currently working'],
-      location: "Remote",
+      badges: ['Working'],
+      location: "On-site",
       title: "Junior Web Developer",
       logoUrl: "/atomic.png",
       start: "Dec 2024",
@@ -114,8 +114,8 @@ export const DATA = {
   projects: [
     {
       title: "AI Powered Code Reviewer",
-      href: "https://chatcollect.com",
-      dates: "",
+      href: "https://ai-powered-code-reviewer-rust.vercel.app",
+      dates: "Web Project",
       active: true,
       description:
         "AI-Powered Code Reviewer – Built a web-based code review tool using MERN Stack and [Google Gemini API](https://gemini.google.com/) to analyze code quality, detect errors, and suggest optimizations. Features include real-time feedback, best practices recommendations, and performance improvements for multiple programming languages.",
@@ -129,8 +129,13 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://ai-powered-code-reviewer-rust.vercel.app",
           icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/AbhishekShrivastav73/AI-powered-code-reviewer",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/ai-powered.png",
@@ -139,99 +144,58 @@ export const DATA = {
         // "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
     {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
+      title: "Code Nest",
+      href: "https://code-nest-alpha.vercel.app",
+      dates: "Product",
       active: true,
       description:
-        "Designed, developed and sold animated UI components for developers.",
+        "Code Nest (Web Development Learning Platform) is a comprehensive educational product designed to teach web development with structured chapters. It includes paid subscription models, an admin dashboard for content and user management, and metadata options for SEO optimization of each post/chapter. The platform ensures a seamless learning experience while enabling monetization and efficient administration.",
       technologies: [
-        "Next.js",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
+        "React JS",
+        "Mongoose",
+        "Mongo DB",
         "TailwindCSS",
         "Stripe",
         "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
+          href: "https://code-nest-alpha.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
-        },
+        
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image: "/code-nest.png",
+      video: "",
     },
     {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
+      title: "Auth Boilerplate",
+      href: "https://www.npmjs.com/package/auth-boilerplate-express",
+      dates: "NPM Package",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+        "A lightweight authentication boilerplate for MERN stack applications with JWT-based authentication, role-based access control (RBAC), and easy API setup. Now includes built-in Multer support for file uploads.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        "NPM",
+        "Mongoose",
+        "Express JS",
+        "JWT",
+        "Bcrypt"
       ],
       links: [
         {
           type: "Website",
-          href: "https://llm.report",
+          href: "https://www.npmjs.com/package/auth-boilerplate-express",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
+        
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "/npm-package.png",
+      video: "",
     },
-    {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
-      active: true,
-      description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://automatic.chat",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
-    },
+   
   ],
   hackathons: [
     {
