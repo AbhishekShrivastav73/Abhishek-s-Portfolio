@@ -72,11 +72,11 @@ export const DATA = {
   work: [
     {
       company: "Infoseek",
-      href: "https://atomic.finance",
+      href: "",
       badges: ['Working'],
       location: "On-site",
       title: "Junior Web Developer",
-      logoUrl: "/atomic.png",
+      logoUrl: "",
       start: "Dec 2024",
       end: "Present",
       description:
@@ -87,7 +87,7 @@ export const DATA = {
   education: [
     {
       school: "University of Lucknow",
-      href: "https://buildspace.so",
+      href: "https://www.lkouniv.ac.in/",
       degree: "Masters in Commerce",
       logoUrl: "/university.webp",
       start: "2022",
@@ -95,7 +95,7 @@ export const DATA = {
     },
     {
       school: "University of Lucknow",
-      href: "https://uwaterloo.ca",
+      href: "https://www.lkouniv.ac.in/",
       degree: "Bachelor's Degree of Commerce",
       logoUrl: "/university.webp",
       start: "2019",
@@ -103,9 +103,9 @@ export const DATA = {
     },
     {
       school: "Seventh-Day Adventist Inter College",
-      href: "https://wlu.ca",
+      href: "",
       degree: "Intermediate",
-      logoUrl: "/laurier.png",
+      logoUrl: "",
       start: "2017",
       end: "2019",
     },
