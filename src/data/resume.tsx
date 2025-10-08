@@ -81,7 +81,7 @@ export const DATA = {
       location: "On-site",
       title: "Full-Stack Web Developer",
       logoUrl: "",
-      start: "Dec 2024",
+      start: "Nov 2024",
       end: "Present",
       description:
         "Full Stack Developer specializing in the MERN stack, building scalable and high-performance web applications. Experienced in React.js, Node.js, Express, and MongoDB, with additional expertise in WordPress backend, bug fixes, and optimizations. Also skilled in PHP, Laravel, and MySQL. Passionate about problem-solving and creating seamless user experiences.",
