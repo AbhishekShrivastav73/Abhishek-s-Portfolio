@@ -22,7 +22,11 @@ export const DATA = {
     "Tailwind CSS",
     "PHP",
     "MySQL", 
-    "Laravel"   
+    "Laravel",
+    "Payment Gateway Integration",
+    "Socket.Io",
+    "Cloudinary",
+    "Multer"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -75,7 +79,7 @@ export const DATA = {
       href: "",
       badges: ['Working'],
       location: "On-site",
-      title: "Junior Web Developer",
+      title: "Full-Stack Web Developer",
       logoUrl: "",
       start: "Dec 2024",
       end: "Present",
@@ -112,6 +116,7 @@ export const DATA = {
    
   ],
   projects: [
+    
     {
       title: "AI Powered Code Reviewer",
       href: "https://ai-powered-code-reviewer-rust.vercel.app",
@@ -144,30 +149,33 @@ export const DATA = {
         // "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
     {
-      title: "Code Nest",
-      href: "https://code-nest-alpha.vercel.app",
-      dates: "Product",
+      title: "My Party Hostess",
+      href: "https://mypartyhost-frontend.vercel.app/",
+      dates: "Product (Live Project)",
       active: true,
       description:
-        "Code Nest (Web Development Learning Platform) is a comprehensive educational product designed to teach web development with structured chapters. It includes paid subscription models, an admin dashboard for content and user management, and metadata options for SEO optimization of each post/chapter. The platform ensures a seamless learning experience while enabling monetization and efficient administration.",
+        "A full-stack MERN-based event management platform that allows users to book and manage events seamlessly. Implemented secure Stripe payments, real-time chat between users and vendors using Socket.IO, and cloud image uploads with Multer + Cloudinary. Designed a responsive and modern UI using React.js & Tailwind CSS, backed by a scalable Node.js + Express.js API and MongoDB for data management.",
       technologies: [
-        "Typescript",
         "React JS",
         "Mongoose",
         "Mongo DB",
         "TailwindCSS",
         "Stripe",
-        "Shadcn UI",
+        "Socket.Io",
+        "Multer",
+        "Cloudinary",
+        "Express",
+        "Node JS"
       ],
       links: [
         {
           type: "Website",
-          href: "https://code-nest-alpha.vercel.app",
+          href: "https://mypartyhost-frontend.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         
       ],
-      image: "/code-nest.png",
+      image: "/myparty2.png",
       video: "",
     },
     {
@@ -195,11 +203,57 @@ export const DATA = {
       image: "/npm-package.png",
       video: "",
     },
+    {
+      title: "Rejouice Landing Page Clone",
+      href: "https://abhishekshrivastav73.github.io/Rejouice/",
+      dates: "Frontend Project",
+      active: true,
+      description:
+        "A pixel-perfect clone of the Rejouice agency’s landing page built using HTML, CSS, JavaScript, and GSAP for smooth and interactive animations. Focused on creating fluid transitions, scroll-based effects, and a modern interactive experience that closely replicates the original website’s feel and motion design.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "GSAP",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://abhishekshrivastav73.github.io/Rejouice/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        
+      ],
+      image: "/rejouice.png",
+      video: "",
+    },
+    {
+      title: "Dribble UI Clone",
+      href: "https://abhishekshrivastav73.github.io/Dribbble-Clone/",
+      dates: "Frontend Project",
+      active: true,
+      description:
+        "A visually appealing Dribbble homepage clone created using HTML, CSS, and JavaScript. Recreated the platform’s modern layout, hover animations, and responsive grid system, focusing on pixel-perfect design and smooth user interactions to match the original Dribbble interface.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "GSAP",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://abhishekshrivastav73.github.io/Dribbble-Clone/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        
+      ],
+      image: "/dribble.png",
+      video: "",
+    },
    
   ],
   hackathons: [
-    
-    
     {
       "title": "REIMAGINE Hackathon",
       "dates": "July 2023",
